@@ -1,0 +1,35 @@
+{
+  "name": "skeleton_client-basic",
+  "version": "1.0.0",
+  "description": "Skeleton for client based projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*",
+    "lint": "eslint .",
+    "dev": "webpack-dev-server",
+    "build": "ENV=production webpack"
+  },
+  "keywords": [
+    "skeleton",
+    "client",
+    "browser"
+  ],
+  "author": "belodpav",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "mocha": "^5.0.5",
+    "webpack": "^4.4.1",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  }
+}
