@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 const path = require('path');
 const mode = process.env.ENV || 'development';
 
@@ -15,7 +16,8 @@ module.exports = {
     },
     watch: mode === 'development',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
     },
     module: {
         rules: [
@@ -56,6 +58,8 @@ module.exports = {
                 from: './src/public',
                 to: ''
             }
-        ])
+        ]),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
