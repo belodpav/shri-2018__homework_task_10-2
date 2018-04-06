@@ -14,6 +14,10 @@ app.get('/search/?', (req, res) => {
     res.send(JSON.stringify(result));
 });
 
+app.get('/', (res, req) => {
+    res.send('test');
+});
+
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running ...');
 });
