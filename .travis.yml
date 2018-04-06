@@ -11,4 +11,5 @@ script:
 deploy:
   provider: heroku
   api_key: ""
-  app: shri-2018-suggester
+  app:
+    master: shri-suggester
