@@ -8,3 +8,7 @@ cache:
 script:
   npm run lint
   npm run test
+deploy:
+  provider: heroku
+  api_key: ""
+  app: shri-2018-suggester

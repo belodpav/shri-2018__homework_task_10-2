@@ -8,10 +8,10 @@ const mode = process.env.ENV || 'development';
 module.exports = {
     mode: mode,
     entry: {
-        index: './src/index.js'
+        index: './client/src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './client/dist'),
         filename: mode === 'development' ? '[name].js' : '[name].min.js'
     },
     watch: mode === 'development',
@@ -55,7 +55,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
-                from: './src/public',
+                from: './client/src/public',
                 to: ''
             }
         ]),
