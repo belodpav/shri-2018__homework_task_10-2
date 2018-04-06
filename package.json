@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "dev": "webpack-dev-server",
     "build": "ENV=production webpack",
-    "server": "node server/app.js"
+    "server:run": "node server/app.js",
+    "server": "npm run build && npm run server:run"
   },
   "keywords": [
     "skeleton",
