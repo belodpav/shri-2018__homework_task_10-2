@@ -1,8 +1,8 @@
-const SuffixTrie = require('./suffixTrie');
+//const SuffixTrie = require('./suffixTrie');
 const express = require('express');
 const app = express();
 
-const trie = new SuffixTrie();
+//const trie = new SuffixTrie();
 
 // app.use('/', express.static('./client/dist'));
 
