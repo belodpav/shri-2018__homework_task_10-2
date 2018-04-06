@@ -14,6 +14,6 @@ app.get('/search/?', (req, res) => {
     res.send(JSON.stringify(result));
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on 3000 port');
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Server is running ...');
 });
