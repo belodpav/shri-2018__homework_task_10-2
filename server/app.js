@@ -1,11 +1,10 @@
 const SuffixTrie = require('./suffixTrie');
-const path = require('path');
 const express = require('express');
 const app = express();
 
 const trie = new SuffixTrie();
 
-app.use('/', express.static(path.resolve('.', 'client/dist/')));
+app.use('/', express.static('./client/dist'));
 
 app.get('/search/?', (req, res) => {
     const reqText = req.query.text;
@@ -15,10 +14,6 @@ app.get('/search/?', (req, res) => {
     res.send(JSON.stringify(result));
 });
 
-app.get('/', (req, res) => {
-    res.sendFile('index.html', {root: path.resolve('.', 'client/dist/')});
-});
-
-app.listen(process.env.PORT || 3000, () => {
-    console.log('Server is running ...');
+app.listen(3000, () => {
+    console.log('Server is running on 3000 port');
 });
